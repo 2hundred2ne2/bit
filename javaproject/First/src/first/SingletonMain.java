@@ -6,7 +6,7 @@ public class SingletonMain {
 		
 		
 	//	Single s =new Singleton();
-		singleton s=Singleton.getInstance
+		Singleton s=Singleton.getInstance();
 		
 	}
 
