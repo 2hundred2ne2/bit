@@ -2,17 +2,12 @@ package ver02;
 
 import java.util.Scanner;
 
-//import ver03.*;
-
 public class PhoneBookMain {
 
 	public static void main(String[] args) {
 	//사용자에게 데이터를 받는다.
 	Scanner s=new Scanner(System.in);
-//	Util.sc.nextLine();
-//	
-//	new PhoneBookMain();// 제약을 준거임 폰북메니저를 사용 못하도록  
-//	
+	
 	while(true) {
 		
 

@@ -20,11 +20,6 @@ public class FruitSalesMain1 {
      //seller3
      FruitSeller seller3=new FruitSeller();
      
-     seller.myMoney+=500;
-     buyer.myMoney-=500;
-seller.numOfApple-=20;
-buyer.numOfapple=+20;
-     
      //사과를 구매 3000원지불
      buyer.buyApple(seller,3000);
      System.out.println("판매자1의 현재 지표");
@@ -34,7 +29,7 @@ buyer.numOfapple=+20;
      System.out.println("판매자2의 현재 지표");
      Seller2.showSaleResult();
      System.out.println("판매자3의 현재 지표");
-    // Seller3.showSaleResult();
+     Seller3.showSaleResult();
      
      seller.showSaleResult();
      buyer.showBuyResult();
