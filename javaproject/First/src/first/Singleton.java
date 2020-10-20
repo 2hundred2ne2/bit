@@ -12,12 +12,12 @@ public class Singleton {
 		
 	}
 	//2.사용할 인스턴스를 클래스 내부에서 생성
-	private static Singleton s =new Singleton();
+	private static Singlrton s =new Singleton();
 	//3.외부에서 만들어진 참조값을 사용할 수 있도록 참조값을 제공하는 메서드
 	
-	static public Singleton getInstance(){
+	static.public.Singleton getInstance(){
 	if(s==null) {
-		s=new Singleton();
+		s=new Singletone();
 		
 	}
 	}

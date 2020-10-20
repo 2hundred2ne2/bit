@@ -10,7 +10,7 @@ public class PackageTest {
 
 		//java.util.Date today=new java.util.Date();
 		//System.out.println(today);
-		Date today = new Date();
+		Date today=new Date();
 		//java.sql.date
 		SimpleDateFormat date=null;
 		
