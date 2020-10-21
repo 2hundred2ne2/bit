@@ -5,7 +5,7 @@ public class SingletonMain {
 	public static void main(String[] args) {
 		
 		
-	//	Singleton s =new Singleton();
+	//	Single s =new Singleton();
 		singleton s=Singleton.getInstance
 		
 	}
