@@ -87,8 +87,8 @@ static int []addAllArray(int[] ar,int addValue){
 int[] ball=new int[45];
 
 //각 변수의 1~45까지의 숫자를 중복되 지않게 저장
-for( int i1=0;i<ball.leng;i++) {
-	ball[i1]=i1+1;
+for(  i=0;i<ball.leng;i++) {
+	ball[i]=i+1;
 	
 }
 //for(inti=0;i<ball.length; i++) {
@@ -98,7 +98,7 @@ for( int i1=0;i<ball.leng;i++) {
 int j=0;//임의의 index
 int temp=0;// 각변수의 값을 바꾸기 위한 임시 변수 
 
-for(int i1=0;i<100;i++) {
+for( i=0;i<100;i++) {
 	//임의의 index를 구한다:1~44
 	j=(int)(Math.random()*44)+1;
 	temp=ball[0];
@@ -107,7 +107,7 @@ for(int i1=0;i<100;i++) {
 }
 //배열에서 0~5까지 배열의 변수 값을 출력
 for(int i=0;i<5;i++) {
-	System.out.println(ball[i1]+"\t");
+	System.out.println(ball[i]+"\t");
 }
 
 
