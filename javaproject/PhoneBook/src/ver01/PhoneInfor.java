@@ -23,7 +23,7 @@ public class PhoneInfor {
  PhoneInfor( String name,String phoneNumber,String birthDay){
 this.name=name;
 this.phoneNumber=phoneNumber;
-this.birthday=birthday;
+this.birthday=birthDay;
  }
  PhoneInfor( String name,String phoneNumber){
 	 //this.name=name;
