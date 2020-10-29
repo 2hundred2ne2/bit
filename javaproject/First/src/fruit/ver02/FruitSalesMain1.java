@@ -18,7 +18,7 @@ public class FruitSalesMain1 {
      
    
      //seller3
-     FruitSeller seller3=new FruitSeller();
+     FruitSeller Seller3=new FruitSeller();
      
      //사과를 구매 3000원지불
      buyer.buyApple(seller,3000);

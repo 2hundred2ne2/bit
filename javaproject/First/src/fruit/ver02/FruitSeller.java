@@ -33,7 +33,7 @@ public class FruitSeller {
 		//APPLE_PRICE=seller.APPLE_PRICE;
 		//numOfApple=seller.APPLE_PRICE;
 		//myMoney=seller.myMoney;
-		this(Seller.myMony,seller.APPLE_PRICE,seller.numOfApple);
+		this(seller.myMoney,seller.APPLE_PRICE,seller.numOfApple);
 	}
 
 	// 기능 : 판매, 정산 출력

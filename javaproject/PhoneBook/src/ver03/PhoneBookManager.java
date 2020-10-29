@@ -1,7 +1,5 @@
 package ver03;
 
-import java.util.Scanner;
-
 public class PhoneBookManager {
 
 	// 배열 : 전화번호 정보(이름, 전화번호, 생일)를 저장하는 목적ㄴ

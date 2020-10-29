@@ -8,9 +8,9 @@ public class MyMeth {
 	// 정수 2개를 받아 / 덧셈 연산을 하고 / 그 결과를 반환하는 메서드
 	long add(long n1, long n2) {
 		
-		long result = n1 + n2 ;
 		
-		return result;
+		
+		return n1 + n2 ;
 	}
 	
 	void sayHello() {
@@ -20,16 +20,16 @@ public class MyMeth {
 	// 정수 두개를 받아서 덧셈의 결과를 출력하는 메서드
 	void plus(int num1, int num2) {
 		
-		int result = num1 + num2;
 		
-		System.out.println(result);
+		
+		System.out.println(num1 + num2);
 	}
 	
 	boolean check() {
 		
 		boolean result = num > 20;
 		
-		return result;
+		return num > 20;
 	}
 	
 	// 정수 두개를 받아서 나눗셈한 결과를 출력하는 메서드
