@@ -1,0 +1,56 @@
+Bigintrger 
+롱에서 못담은 것을 담을 수 있는 
+
+bigDecilmal  숫자 연 산 관련된 것 
+
+난수의 생성 , 문자열 
+
+나수 =random메서드 
+0<=1.0 double 
+*10+1
+
+file <- 설정 읽어서 처리 
+문자열 규칙  텍스트를 뽑아 낼때 
+
+ 
+Wrapper class
+8가지 기본형 타입 ->data-> 창조형 개체  
+정수 4개
+상수 2
+문자 1 
+boolean 1
+
+기본형 데이트를 클래스호정의 하는 것 
+
+기본형 데이터 하나를 멤버 변수로 하는 클래스 
+
+
+래퍼 클래스는 자바 개발자들이 래퍼 클래스 를 만들어서 제공 
+
+컬렉션 프레임 워크 
+컬렉션 -> 객체를 좀더 효과적으로 저장해주는 클래스 
+             참조변수를 참조형 배열처럼  데이터를 묶에서 저장하는데 참조값을 저장해주는 기능을 가진 컬랙션 
+
+int i2 = Integer.parseInt("100");★★★★★
+
+Wrapper class 특징 ★★★★★
+Boxing 
+Unboxing 
+Boxing
+* 기본 자료형 데이터를 Wrapper 인스턴스로 감싸는 것!
+UnBoxing
+* Wrapper 인스턴스에 저장된 데이터를 꺼내는 것!
+
+Auto Boxing
+* 기본 자료형 데이터가 자동으로 Wrapper 인스턴스로 감싸지는 것!
+Auto UnBoxing
+Wrapper 인스턴스에 저장된 데이터가 자동으로 꺼내지는 것!
+
+
+
+기본 자료형 데이터가 와야 하는데, Wrapper 인스턴스가 있다면,
+Auto Unboxing!
+인스턴스가 와야하는데, 기본 자료형 데이터가 있다면,
+Auto Boxing!
+
+

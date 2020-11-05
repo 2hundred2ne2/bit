@@ -1,0 +1,2 @@
+• 참조변수가 null로 초기화 된 상황에서 메소드를 호출하는 예외상황
+ 예외 클래스 : NullPointerException
