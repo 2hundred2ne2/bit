@@ -1,0 +1,1 @@
+SELECT*FROM emp where deptno=10; 
