@@ -1,0 +1,177 @@
+--2020.11.13
+--transaction
+--여러개의 sql을 하나의 단위로 처리하는 것
+--트렌젝션이 가지는 모든 작업이 모두 정상 처리되어야 트렌젝션이 완료되었다고 하는것.
+--처리과정에서 오류가 방생하면 처음으로 동아가 다시 트렌잭션
+
+select * from emp10;
+SELECT * FROM dept01;
+--부서 테이블에 데이터 하나를 저장 -정상
+--사원 테이블에 새로운 사원을 입력 -오류 rollback
+
+insert into dept01 VALUES(50,'RD',' SEOUL');
+insert into EMP10 (EMPNO,ENAME,JOB,SAL)VALUES('ten','TEN','MANAGER',2500);
+ROLLBACK; --오류가 발생해서 초기화(마지막 저장 커빗 단계)
+
+--새로운 transation 시작
+insert into dept01 VALUES(50,'RD',' SEOUL');
+insert into EMP10 (EMPNO,ENAME,JOB,SAL)VALUES(7777,'TEN','MANAGER',2500);
+select * from emp10;
+SELECT * FROM dept01;
+
+--새로운 trsnsaction 시작 
+UPDATE emp10
+set mgr=(select empno from emp10 where ename='KING') ;
+SELECT * FROM EMP10; 
+----잘못 처리된 작업이다!! ROLLBACK
+ROLLBACK;
+
+
+
+
+
+
+
+
+--가상 테이블 VIEW
+--실제 테이블을 기잔으로 논리적인 가상테이블을 ->퍋ㅈ
+--CREATE[ OR REPLACE] VIEW VIEW_NAME AS SUBQUERY
+--자주 사용되는 30번 부서에 소속된 사원들의 사번과 이름과 부서번호를 출력
+
+CREATE VIEW VUEW_RMP30
+AS SELECT EMPNO,ENAME,DEPTNO FROM EMP WHERE EMPNO=10;
+
+CREATE VIEW VIEW_EMP30
+AS SELECT EMPNO,ENAME,DEPTNO FROM EMP WHERE EMPNO=30;
+
+SELECT * FROM VIEW_EMP30;
+
+--전사 정보 출력(사원 정보 부서정보)
+
+SELECT*
+FROM EMP,DEPT
+WHERE EMP.DEPTNO=dept.deptno
+;
+
+CREATE OR REPLACE VIEW VIEW_EMP_DEPT
+AS
+SELECT EMPNO,ENAME,JOB,MGR,HIREDATE,SAL,COMM,emp.deptno,DNAME,LOC
+FROM EMP,DEPT
+WHERE EMP.DEPTNO=dept.deptno
+;
+SELECT *FROM VIEW_EMP_DEPT
+WHERE DEPTNO=10;
+
+--VIEW의 정보 확인 : USER_VIEWS 테이블을 통해 확인 가능 , 로그인한 사용자의 VIEW인스턴스의 정보
+
+
+SELECT VIEW_NAME,TEXT FROM user_views;
+
+
+--VIEW_EMP30을 통해 INSERT
+INSERT INTO view_emp30 VALUES(99,'TESTER',10)
+;
+DESC VIEW_EMP30;
+
+SELECT*FROM VIEW_EMP30;
+ROLLBACK
+;
+
+--VIEW의 삭제: 객체를 삭제하는 방식과 동일 
+--DROP(TABLE|VIEW)VIEW_NAME
+
+DROP VIEW VIEW_EMP_DEPT
+;
+SELECT *FROM USER_VIEW;
+
+--VIEW_HIR : 입사일 기준으로 오름차순으로 정렬된 결과를 가상 상태
+
+SELECT ROWNUM,EMPNO,ENAME,HIREDATE
+FROM EMP
+ORDER BY hiredate
+;
+
+CREATE OR REPLACE VIEW VIEW_EMP_HIR
+AS
+SELECT EMPNO,ENAME,HIREDATE
+FROM EMP
+ORDER BY hiredate
+;
+SELECT ROWNUM,EMPNO,ENAME,HIREDATE
+FROM view_emp_hir
+
+;
+
+SELECT * FROM VIEW_EMP_HIR WHERE ROWNUM<=5;
+
+--인라인 뷰를 이용해서 가장 최근에 입사한 사원 5명을 추출
+SELECT *
+FROM(SELECT *FROM EMP ORDER BY HIREDATE DESC)
+WHERE ROWNUM<=5
+;
+
+
+--SEQUENCE: 숫자 자동 생성기 ,시작값,증가값,최소값,최대값,반환
+--DEPT 테이블 DEPTNO-. PK
+--DEPTNO 에 사용할 SEQUENCE 생성
+
+DROP SEQUENCE SEQ_DEPT_DEPTNO;
+CREATE SEQUENCE SEQ_DEPT_DEPTNO
+MINVALUE 10
+MAXVALUE 90
+START WITH 10
+INCREMENT BY 10
+;
+
+--EMP 테이블의   EMPNO기본키에 사용 할 SEQUENCE를 생성
+CREATE SEQUENCE SEQ_EMP_EMPNO
+MINVALUE 0
+START WITH 0
+INCREMENT BY 1
+;
+
+--SEQUENCE 개체로 숫자를 생성 ,현재 숫자를 읽어오는 명령
+--숫자 생성 : NEXTVAL-> 새로운 숫자를 생성하고 숫자를반환
+--현재 숫자 반환:CURRVAL 
+
+--새롭게 생성하는 숫자확인 
+SELECT SEQ_DEPT_DEPTNO.nextval
+FROM DUAL;
+
+--현재 숫자 확인
+SELECT SEQ_DEPT_DEPTNO.CURRVAL
+FROM DUAL;
+
+INSERT INTO DEPT01 VALUES(SEQ_DEPT_DEPTNO.nextvaL,'TEST','TEST');
+SELECT
+    *
+FROM dept01;
+
+
+--INDEX:검색을 빠르게 하기위한 객체
+--CREATE INDEX INDEX_NAME ON TARGETTABLE_NAME (CULUMN_NAME)
+
+--INDEX 확인을 하는 USER_IND_COLUMNS
+
+DESC USER_IND_COLUMNS;
+
+
+SELECT *FROM USER_IND_COLUMNS;
+
+--PRIMARY KEY 또는 UNIQUE 속성은 자동을 INDEX 생성이 된다.
+SELECT *FROM EMP10;
+
+INSERT INTO EMP10 
+SELECT * FROM EMP10;
+COMMENT;
+
+
+INSERT INTO EMP10(EMPNO,ENAME)VALUES(221,'TESTER2');
+SELECT EMPNO,ENAME FROM EMP10 WHERE EMPNO=221;
+
+CREATE INDEX INDEX_EMP10_ENAME
+ON EMP10(ENAME);
+
+--EMPNO INDEX로 생성
+CREATE INDEX INDEX_EMP10_EMPNO
+ON EMP10(EMPNO);
