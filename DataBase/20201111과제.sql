@@ -1,5 +1,6 @@
 --32. EQUI 조인을 사용하여 SCOTT 사원의 부서번호와 부서 이름을 출력하시오.
 
+--CROSS JOIN에서 공통 컬럼의 동등 비교를 의미 있는 결과로 만든 JOIN
 SELECT D.DEPTNO,d.dname
 FROM EMP E,dept D
 WHERE e.deptno=d.deptno AND e.ename='SCOTT'
@@ -57,7 +58,7 @@ ORDER BY E.EMPNO DESC
 ;
 ​
 
-​
+
 
 --40. SELF JOIN을 사용하여 지정한 사원의 이름, 부서번호, 지정한 사원과 동일한 부서에서 근무하는 사원을 출력하시오. ( SCOTT )
 
@@ -68,6 +69,15 @@ SELECT ENAME,DEPTNO
 FROM EMP
 WHERE DEPTNO=(SELECT DEPTNO  FROM EMP WHERE ENAME = 'SCOTT');
 
+
+--41
+SELECT E.ENAME,E.HIREDATE
+FROM EMP E,EMP W
+
+WHERE  E.HIREDATE>W.HIREDATE
+AND E.ENAME='WARD'
+
+;
 ​
 
 --42. SELF JOIN 을 사용하여 관리자보다 먼저 입사한 모든 사원의 이름 및 입사일을 관리자의 이름 및 입사일과 함께 출력하시오.

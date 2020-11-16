@@ -1,4 +1,4 @@
---1. 덧셈연산자를 이용하여 모든 사원에 대해서 $300의 급여 인상을 계산한 후 사원의 이름, 급여, 인상된 급여를 출력하시오.
+`--1. 덧셈연산자를 이용하여 모든 사원에 대해서 $300의 급여 인상을 계산한 후 사원의 이름, 급여, 인상된 급여를 출력하시오.
 
 SELECT
     *
@@ -32,6 +32,11 @@ select ename,sal
 from emp
 where sal  not between 2000 and 3000
 ;
+
+select ename,sal
+from emp
+where not (sal>2000 and sal<=3000)
+;
 ​
 --6. 1981년 2월 20일 부터 1981년 5월 1일 사이에 입사한 사원의 이름, 담당업무, 입사일을 출력하시오.
 
@@ -53,6 +58,12 @@ order by ename desc
 select ename,sal,deptno
 from emp
 where sal between 2000 and 3000 and deptno in(20,30)
+order by ename
+;
+
+select ename,sal,deptno
+from emp
+where (sal>=2000and sal<=3000)and(deptno=20 and deptno=30)
 order by ename
 ;
 
@@ -87,7 +98,7 @@ where ename like '__R%'
 
 select ename
 from emp
-where ename like '%A%E%'or ename like'%E%A%'
+where ename like '%A%'and ename like'%E%'
 ;
 --14. 담당업무가 CLERK, 또는 SALESMAN이면서 급여가 $1600, $950 또는 $1300이 아닌 사원의 이름, 담당업무, 급여를 출력하시오.
 SELECT ename,job,sal
