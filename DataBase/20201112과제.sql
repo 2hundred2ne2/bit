@@ -30,7 +30,10 @@ WHERE SAL > (SELECT SAL  FROM EMP WHERE empno='7499');
 
 
 ​
-
+ SELECT ENAME,JOB,SAL
+ FROM EMP
+ WHERE SAL <= all(SELECT SAL FROM EMP);
+​
 ​
 
 ​
@@ -41,10 +44,16 @@ WHERE SAL > (SELECT SAL  FROM EMP WHERE empno='7499');
 SELECT *
 FROM (SELECT JOB ,AVG(SAL)
         FROM EMP 
-        GROUP BY JOB;)
+        GROUP BY JOB)
         WHERE JOB = 'CLERK';
 
 ​
+SELECT JOB ,AVG(SAL)
+        FROM EMP 
+        GROUP BY JOB
+        having avg(sal)<= all(SELECT AVG(SAL)
+        FROM EMP 
+        GROUP BY JOB);
 
 ​
 
@@ -70,13 +79,18 @@ ORDER BY DEPTNO ;
 
 --48. 담당업무가 ANALYST 인 사원보다 급여가 적으면서 업무가 ANALYST가 아닌 사원들을 표시(사원번호, 이름, 담당 업무, 급여)하시오.
 
-SELECT * FROM EMP WHERE JOB='ANALYST';
+SELECT distinct sal FROM EMP WHERE JOB='ANALYST';
 
 SELECT E1.EMPNO,E1.ENAME,E1.JOB,E1.SAL
 FROM EMP E1,(SELECT * FROM EMP WHERE JOB='ANALYST') E2
 WHERE E1.SAL  <  E2.SAL  
 ;
 ​
+select *
+from emp
+where sal<=all(SELECT distinct sal FROM EMP WHERE JOB='ANALYST')
+and job!='ANALYST'
+;
 
 ​
 
@@ -94,16 +108,24 @@ SELECT ENAME
 FROM  EMP
 WHERE  ENAME NOT IN (SELECT E.ENAME FROM EMP E, EMP M WHERE E.EMPNO=M.MGR)
 ;
+
+
+select distinct mgr from emp where mgr is not null ;
+
+select ENAME  from emp where empno not in(select distinct mgr from emp where mgr is not null);
+
 --50. 부하직원이 있는 사원의 이름을 표시하시오.
 
 
-​SELECT ENAME
+
+select ENAME
 FROM  EMP
 WHERE  ENAME IN (SELECT E.ENAME FROM EMP E, EMP M WHERE E.EMPNO=M.MGR)
 ;
 
 ​
 
+select ENAME  from emp where empno in(select distinct mgr from emp where mgr is not null);
 ​
 
 ​
@@ -130,7 +152,8 @@ SELECT AVG(SAL) FROM EMP ;
 
 SELECT EMPNO,ENAME
 FROM EMP
-WHERE SAL >(SELECT AVG(SAL) FROM EMP);
+WHERE SAL >(SELECT AVG(SAL) FROM EMP)
+order by sal;
 ​
 
 ​
@@ -163,6 +186,9 @@ SELECT EMP.DEPTNO ,ENAME,JOB FROM DEPT,EMP  WHERE DEPT.deptno = EMP.DEPTNO AND L
 SELECT *FROM DEPT ;
 ​
 
+select deptno from dept where  LOC ='DALLAS';
+
+SELECT * FROM emp where deptno=(select deptno from dept where  LOC ='DALLAS');
 
 
 
@@ -216,7 +242,12 @@ WHERE SAL >(SELECT AVG(SAL) FROM EMP) AND DEPTNO IN (SELECT DEPTNO FROM EMP WHER
 ; 
 
 
-​
+SELECT EMPNO,ENAME,SAL
+FROM EMP JOIN DEPT
+USING(DEPTNO) 
+WHERE SAL >(SELECT AVG(SAL) FROM EMP)  AND (SELECT DEPTNO FROM EMP WHERE ENAME LIKE '%M%');
+; 
+
 
 ​
 
@@ -225,7 +256,7 @@ WHERE SAL >(SELECT AVG(SAL) FROM EMP) AND DEPTNO IN (SELECT DEPTNO FROM EMP WHER
 --58. 평균급여가 가장 적은 업무를 찾으시오.
 
 
-SELECT JOB ,AVG(SAL)FROM EMP GROUP BY JOB; 
+SELECT JOB ,AVG(SAL)FROM EMP GROUP BY JOB having avg(sal)<=all(SELECT AVG(SAL) FROM EMP GROUP BY JOB); 
 ​
 
 
