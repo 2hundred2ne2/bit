@@ -1,0 +1,18 @@
+package member;
+
+public class Member {
+
+	//아이디,비번 ,이름 ,사진
+	private String userId;
+	private String pw;
+	private String userName;
+	private String photo;
+	
+	//기본 생성자 필수
+	public Member() {
+	}
+	
+	
+	
+	
+}
