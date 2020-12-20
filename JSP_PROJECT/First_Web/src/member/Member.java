@@ -1,14 +1,15 @@
 package member;
 
+// beans 생성
 public class Member {
-
-	//아이디,비번 ,이름 ,사진
-	private String userId; 		//회원아이디
-	private String pw;			//회원비밀번호
-	private String userName;	//회원의이름
-	private String photo;		//회원의 프로필사진
 	
-	//기본 생성자 필수
+	// 아이디, 비번, 이름, 사진
+	private String userId;  // 회원의 아이디
+	private String pw;		// 회원의 비밀번호
+	private String userName; // 회원의 이름
+	private String photo;    // 회원의 프로필 사진
+	
+	// 기본 생성자 필수
 	public Member() {
 	}
 
@@ -46,12 +47,10 @@ public class Member {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+		return "Member [userId=" + userId + ", pw=" + pw + ", userName=" + userName + ", photo=" + photo + "]";
 	}
+	
+	
+	
 
-	
-	
-	
-	
 }

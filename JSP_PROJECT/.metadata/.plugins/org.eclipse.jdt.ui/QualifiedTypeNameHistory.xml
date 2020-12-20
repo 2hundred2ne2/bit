@@ -3,4 +3,6 @@
 <fullyQualifiedTypeName name="org.apache.naming.java.javaURLContextFactory"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
 <fullyQualifiedTypeName name="org.apache.catalina.connector.Response"/>
+<fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

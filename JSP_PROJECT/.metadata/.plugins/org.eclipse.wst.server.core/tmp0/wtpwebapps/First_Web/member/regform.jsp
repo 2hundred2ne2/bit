@@ -10,7 +10,7 @@
 <body>
     <h1>회원 가입</h1>
     <hr>
-    <form action="regMember">
+    <form  action="regMember.jsp" method="post">
         <table>
             <tr>
                 <th><label for="userid">아이디(email)</label></th>

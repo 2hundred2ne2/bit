@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>최종결과페이지</title>
+<title>최종 결과 페이지</title>
 </head>
 <body>
 
-<h1>최종페이지</h1>
+	<h1>최종 결과 페이지</h1>
 
 </body>
 </html>
