@@ -1,6 +1,8 @@
 INDEX VERSION 1.131
 C:\Users\pc\Documents\GitHub\bit\JSP_PROJECT\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2422666812.index
 \First_Web\src
+C:\Users\pc\Documents\GitHub\bit\JSP_PROJECT\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2565774856.index
+\OpenProject\src
 C:\Users\pc\Documents\GitHub\JSP_PROJECT\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1744780406.index
 \First_Web\src
 C:\Users\pc\Documents\GitHub\bit\JSP_PROJECT\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2413477066.index

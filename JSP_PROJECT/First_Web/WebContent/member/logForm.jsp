@@ -10,8 +10,8 @@
 
 <body>
     <h1>회원 로그인 </h1>
-    <hr>
-    <form action="login.jsp" method="post">
+    <hr> 
+    <form action="<c:url value="/member/login.jsp"/>" method="post">
         <table>
             <tr>
                 <th><label for="userid">아이디</label></th>
