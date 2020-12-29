@@ -11,6 +11,17 @@
 <fullyQualifiedTypeName name="javax.servlet.Servlet"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContainerInitializer"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.lang.Class"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.mysql.cj.jdbc.interceptors.ResultSetScannerInterceptor"/>
+<fullyQualifiedTypeName name="java.sql.Statement"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="guestbook.model.Message"/>
+<fullyQualifiedTypeName name="guestbook1.dao.MessageDao"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="guestBook.service.GetmessageListService"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="guestBook.dao.MessageDao"/>
+<fullyQualifiedTypeName name="guestBook.model.MessageListview"/>
+<fullyQualifiedTypeName name="com.mysql.cj.protocol.Message"/>
 </qualifiedTypeNameHistroy>
