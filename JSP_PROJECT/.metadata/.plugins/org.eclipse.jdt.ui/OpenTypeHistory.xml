@@ -1,9 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-<typeInfo handle="=First_Web/C:\/Program Files\/Java\/jre1.8.0_271\/lib\/rt.jar=/owner.project.facets=/java=/=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;com.sun.org.apache.xalan.internal.xsltc.dom(Filter.class[Filter" modifiers="1537" timestamp="1607919856476"/>
-<typeInfo handle="=First_Web/C:\/apache-tomcat-8.5.61\/lib\/servlet-api.jar=/owner.project.facets=/jst.web=/=/javadoc_location=/https:\/\/docs.oracle.com\/javaee\/7\/api\/=/&lt;javax.servlet(Filter.class[Filter" modifiers="1537" timestamp="1606971932000"/>
-<typeInfo handle="=GuestBook/C:\/Program Files\/Java\/jre1.8.0_271\/lib\/rt.jar=/owner.project.facets=/java=/=/javadoc_location=/https:\/\/docs.oracle.com\/javase\/8\/docs\/api\/=/&lt;java.lang(Exception.class[Exception" modifiers="33" timestamp="1607919856476"/>
-<typeInfo handle="=MVCTest/src&lt;mvc.command{Command.java[Command" modifiers="1025" timestamp="1609306388153"/>
-<typeInfo handle="=OpenProjectMVC/C:\/apache-tomcat-8.5.61\/lib\/servlet-api.jar=/owner.project.facets=/jst.web=/=/javadoc_location=/https:\/\/docs.oracle.com\/javaee\/7\/api\/=/&lt;javax.servlet.http(HttpServlet.class[HttpServlet" modifiers="1057" timestamp="1606971932000"/>
-<typeInfo handle="=OpenProjectMVC/src&lt;mvc.command{Command.java[Command" modifiers="513" timestamp="1609315736705"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>

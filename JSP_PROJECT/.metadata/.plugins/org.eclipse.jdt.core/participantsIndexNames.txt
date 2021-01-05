@@ -15,6 +15,8 @@ C:\Users\bit\Documents\GitHub\bit\JSP_PROJECT\.metadata\.plugins\org.eclipse.jst
 \MVCTest\src
 C:\Users\bit\Documents\GitHub\bit\JSP_PROJECT\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2159637386.index
 \MVCTest\src
+C:\Users\bit\Documents\GitHub\bit\JSP_PROJECT\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1581987515.index
+\Ajax\src
 C:\Users\bit\Documents\GitHub\bit\JSP_PROJECT\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3598833506.index
 \First_Web\src
 C:\Users\bit\Documents\GitHub\bit\JSP_PROJECT\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2422666812.index
