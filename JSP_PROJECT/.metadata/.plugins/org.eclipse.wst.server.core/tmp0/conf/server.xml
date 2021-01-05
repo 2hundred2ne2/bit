@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Users\pc\Documents\GitHub\bit\JSP_PROJECT\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\pc\Documents\GitHub\bit\JSP_PROJECT\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Firstweb" path="/first" reloadable="true" source="org.eclipse.jst.jee.server:Firstweb"/></Host>
+      <Context docBase="C:\Users\bit\Documents\GitHub\bit\JSP_PROJECT\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\bit\Documents\GitHub\bit\JSP_PROJECT\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Firstweb" path="/first" reloadable="true" source="org.eclipse.jst.jee.server:Firstweb"/><Context docBase="C:\Users\bit\Documents\GitHub\bit\JSP_PROJECT\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\OpenProject" path="/OpenProject" reloadable="true" source="org.eclipse.jst.jee.server:OpenProject"/></Host>
     </Engine>
   </Service>
 </Server>
