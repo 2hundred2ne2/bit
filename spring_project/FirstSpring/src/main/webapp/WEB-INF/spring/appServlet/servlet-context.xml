@@ -18,8 +18,7 @@
 	<resources mapping="/uploadfile/**" location="/uploadfile/" />
 	<resources mapping="/css/**" location="/css/" />
 	<resources mapping="/js/**" location="/js/" />
-		<resources mapping="/images/**" location="/images/" />
-	
+	<resources mapping="/images/**" location="/images/" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -36,8 +35,15 @@
 		<!-- <beans:property name="defaultEncoding" value="utf-8"/> -->
 	</beans:bean>
 	
+	<!-- <beans:bean id="memberDao"
+				class="com.aia.firstspring.member.dao.MemberDao">
+		<constructor-arg ref="jdbcTemplate"/>
+	</beans:bean>
 	
+	<beans:bean id="memberListService"
+				class="com.aia.firstspring.member.service.MemberListService"/>
 	
+	 -->
 	
 	
 	

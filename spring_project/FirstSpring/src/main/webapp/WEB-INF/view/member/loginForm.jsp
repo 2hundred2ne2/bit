@@ -13,6 +13,7 @@
 id <input type="text" name="uid"><br>
 pw <input type="password" name="pw">
 <input type="submit"> 
+<input type="submit">
 
 
 </form>
