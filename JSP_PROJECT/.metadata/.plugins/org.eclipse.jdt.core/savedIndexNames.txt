@@ -58,7 +58,6 @@ INDEX VERSION 1.131+C:\Users\bit\Documents\GitHub\bit\JSP_PROJECT\.metadata\.plu
 837652586.index
 2911721246.index
 4014076102.index
-187550897.index
 1004867772.index
 1182952440.index
 3158648900.index
