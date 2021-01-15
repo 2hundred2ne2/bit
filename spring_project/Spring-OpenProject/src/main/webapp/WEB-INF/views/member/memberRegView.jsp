@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="styleSheet" href="${url_defaultCss}">
+<%@ include file="/WEB-INF/views/include/basicset.jsp" %>
 <style>
 </style>
 </head>
@@ -61,4 +61,4 @@
 
 </body>
 </html>
-© 2021 GitHub
+© 2021 GitHub, Inc.
