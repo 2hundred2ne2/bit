@@ -7,11 +7,16 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.aia.firstspring.domain.MemberRegRequest;
 import com.aia.firstspring.member.domain.Member;
 import com.aia.firstspring.member.service.MemberListService;
+import com.aia.firstspring.member.service.MemberRegService;
 import com.aia.firstspring.member.service.MemberRestService;
 
 @RestController
@@ -23,6 +28,9 @@ public class RestApiController {
 	
 	@Autowired
 	private MemberListService listService;
+	
+	@Autowired
+	private MemberRegService regService;
 
 //	@GetMapping("/{idx}") // GET  /rest/ver1/members/39
 	//@GetMapping
@@ -56,6 +64,38 @@ public class RestApiController {
 			) {
 		return restService.getMember(idx);
 	}
+	
+	//@RequestMapping(method = RequestMethod.POST)
+	@PostMapping
+	public String insertMember(
+			@RequestBody MemberRegRequest regRequest			
+			) {
+		
+		//String result = "N";
+
+		System.out.println(regRequest);
+		System.out.println(regRequest.getToMember());
+		
+		//regService.insertMember(regRequest.getToMember());
+			
+		return regService.insertMember(regRequest.getToMember())>0 ? "Y" : "N";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }
