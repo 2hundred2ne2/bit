@@ -69,5 +69,6 @@ public class Member {
 		return "Member [idx=" + idx + ", memberid=" + memberid + ", password=" + password + ", membername="
 				+ membername + ", memberphoto=" + memberphoto + ", regdate=" + regdate + "]";
 	}
+	
 
 }

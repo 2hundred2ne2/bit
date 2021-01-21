@@ -19,7 +19,7 @@ public class MemberDao {
 
 	// JdbcTemplate template 인스턴스를 주입
 	// 1. 생성자 주입방식
-	// 2. 프로퍼티 주입 방식
+	// 2. 프로퍼티 주입 방식   
 	// 3. 자동 주입
 
 	// 생성자를 이용한 객체 주입

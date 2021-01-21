@@ -23,6 +23,8 @@ public class MemberRegService {
 	@Autowired
 	private SqlSessionTemplate template;
 	
+	private MailSenderService mailSenderService ;
+	
 	
 	public int insertMember(Member member) {
 		int result = 0;
