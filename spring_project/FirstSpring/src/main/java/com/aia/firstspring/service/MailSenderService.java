@@ -1,4 +1,4 @@
-+package com.aia.firstspring.service;
+package com.aia.firstspring.service;
 
 import java.io.UnsupportedEncodingException;
 
@@ -83,7 +83,7 @@ public class MailSenderService {
 			// 메일 내용
 			message.setText(text, "utf-8", "html");
 			// 보내는 사람의 이메일 : gmail을 사용하는 경우 경우에는 인증된 메일로 적용이 된다.
-			message.setFrom(new InternetAddress("qptm4@naver.com"));
+			message.setFrom(new InternetAddress("ryuyj76@naver.com"));
 			// 받는 사람의 이메일 주소
 			message.addRecipient(RecipientType.TO, new InternetAddress(toEmailAddress, name+" 고객님", "utf-8"));
 			// 메일 전송
