@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 <%-- <link rel="styleSheet"
 	href="${pageContext.request.contextPath}/css/default.css"> --%>
-	<link rel="styleSheet" href="${url_defaultCss}">
+	<link rel="styleSheet" href="${url_defaultCss}"> <!-- <%= request.getContextPath() %>   상대 결로로 하면 문제가 생김   -->
 <style>
 </style>
 </head>
@@ -17,7 +17,7 @@
 
 
 
-	<%@ include file="/include/header.jsp"%>
+	<%@ include file="/include/header.jsp"%> <!-- 절대경로 -->
 
 	<%@ include file="/include/nav.jsp"%>
 

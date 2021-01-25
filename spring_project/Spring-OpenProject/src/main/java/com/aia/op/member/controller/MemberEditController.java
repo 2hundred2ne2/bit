@@ -15,29 +15,41 @@ import com.aia.op.member.service.MemberEditService;
 @Controller
 @RequestMapping("/member/edit")
 public class MemberEditController {
-@Autowired 
+	
+	@Autowired
 	private MemberEditService editService;
-
+	
 	@RequestMapping(method = RequestMethod.GET)
-	public String editForm(@RequestParam("idx") int idx, Model model) {
-
-		// 서비스-> dao -> mapper -> Member->mapper->int
-		model.addAttribute("member",editService.getMember(idx));
+	public String editForm(
+			@RequestParam("idx") int idx,
+			Model model
+			) {
+		// Service -> MemberDao -> mapper -> Member
+		model.addAttribute("member", editService.getMember(idx));
 		return "member/editForm";
-
 	}
-@RequestMapping(method = RequestMethod.POST)
+	
+	@RequestMapping(method = RequestMethod.POST)
 	public String editMember(
 			MemberEditRequest editRequest,
-			Model model,
-			HttpServletRequest request
+			HttpServletRequest request,
+			Model model
 			) {
-
-	//System.out.println(editRequest);
-	
-	model.addAttribute("result",editService.editMember(editRequest, request));
-	
+		
+		// Service -> MemberDao : update -> mapper -> int
+		
+		//System.out.println(editRequest);
+		
+		model.addAttribute("result", editService.editMember(editRequest, request));
+		
 		return "member/edit";
 	}
-
+	
+	
+	
+	
+	
+	
+	
+	
 }

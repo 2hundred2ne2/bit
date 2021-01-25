@@ -8,7 +8,7 @@
 	int result = 0;
 	// DAO 객체의 insert 메소드로 member참조변수 전달, Connection 객체의 참조변수 전달
 	Connection conn = ConnectionProvider.getConnection();
-	// MemberDao dao = new MemberDao();
+	// MemberDao dao = new MemberDao();//dao 쪽으로 보내주면 insert를해줌
 	MemberDao dao = MemberDao.getInstance();
 	
 	if (conn != null) {

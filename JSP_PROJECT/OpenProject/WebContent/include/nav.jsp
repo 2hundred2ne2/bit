@@ -17,8 +17,8 @@
 			 <%
 					}
 			 %>			 
-			 </li>
-			<li> <a href="<c:url value="/member/mypage/mypage1.jsp"/>">mypage1</a>  </li>
+			 </li><!--      request.getcontextPath()      /op -->
+			<li> <a href="<c:url value="/member/mypage/mypage1.jsp"/>">mypage1</a>  </li> <!-- 절대경로 http localhost /op -->
 			<li> <a href="<c:url value="/member/mypage/mypage2.jsp"/>">mypage2</a>  </li>
 			<li> <a href="<c:url value="/member/manager/memberList.jsp"/>">회원 정보</a>  </li>
 			<li> <a href="#">방명록</a>  </li>
