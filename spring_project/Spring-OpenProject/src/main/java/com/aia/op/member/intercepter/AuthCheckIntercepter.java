@@ -9,25 +9,29 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 public class AuthCheckIntercepter extends HandlerInterceptorAdapter {
 
 	@Override
-	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+	public boolean preHandle(
+			HttpServletRequest request, 
+			HttpServletResponse response, 
+			Object handler)
 			throws Exception {
-		//로그인 여부 확인 하고
-		//로그인 상태->return true
-		//비로그인 상태->return false,로그인 페이지로 redirect
 		
-		HttpSession session =request.getSession(false); 
-		//Session이 null 일떄 그대로 유지하기 위해서 false전달
+		// 로그인 여부를 확인 하고
+		// 로그인 상태 -> return true
+		// 비로그인 상태 -> return false, 로그인 페이지로 redirect
 		
-		if(session != null&& session.getAttribute("loginInfo")!=null) {
+		HttpSession session = request.getSession(false); 
+		// Session 이 null일때 그대로 유지하기 위해서  false 전달 
+		
+		if(session != null && session.getAttribute("loginInfo") != null) {
 			return true;
-			
 		}
 		
-	response.sendRedirect(request.getContextPath()+"/member/login");
-
-	
+		response.sendRedirect(request.getContextPath()+"/member/login");
 		
 		return false;
 	}
 
+	
+	
+	
 }

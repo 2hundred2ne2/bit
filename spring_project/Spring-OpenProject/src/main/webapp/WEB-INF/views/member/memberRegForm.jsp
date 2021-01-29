@@ -163,6 +163,7 @@
 			checkBox.prop('checked', false);
 			
 		});
+	
 		
 		
 	});

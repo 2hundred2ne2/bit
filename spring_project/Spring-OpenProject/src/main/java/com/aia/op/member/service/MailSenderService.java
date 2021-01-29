@@ -27,24 +27,24 @@ public class MailSenderService {
 		
 		try {
 			
-			// 메일 제목
-			message.setSubject("[안내] 회원가입을 축하합니다.", "UTF-8");
+			// 硫붿씪 �젣紐�
+			message.setSubject("[�븞�궡] �쉶�썝媛��엯�쓣 異뺥븯�빀�땲�떎.", "UTF-8");
 			
-			// 메일 내용 컨텐츠 html
-			String html = "<h1>회원가입을 축하합니다.</h1>";
-			html += "<h3>인증을 위해 아래 링크를 클릭해주세요</h3>";
-			html += "<a href=\"http://localhost:8080/op/member/verify?id="+member.getIdx()+"&code="+member.getCode()+"\">인증하기</a>";
+			// 硫붿씪 �궡�슜 而⑦뀗痢� html
+			String html = "<h1>�쉶�썝媛��엯�쓣 異뺥븯�빀�땲�떎.</h1>";
+			html += "<h3>�씤利앹쓣 �쐞�빐 �븘�옒 留곹겕瑜� �겢由��빐二쇱꽭�슂</h3>";
+			html += "<a href=\"http://localhost:8080/op/member/verify?id="+member.getIdx()+"&code="+member.getCode()+"\">�씤利앺븯湲�</a>";
 			
-			// message에 내용 적용
+			// message�뿉 �궡�슜 �쟻�슜
 			message.setText(html, "utf-8", "html");
 			
-			// from 설정
-			message.setFrom(new InternetAddress("evasally10@gmail.com"));
+			// from �꽕�젙
+			message.setFrom(new InternetAddress("aia.jin.202009@gmail.com"));
 			
-			// to 설정
-			message.addRecipient(RecipientType.TO, new InternetAddress(member.getMemberid(), member.getMembername()+" 님", "UTF-8"));
+			// to �꽕�젙
+			message.addRecipient(RecipientType.TO, new InternetAddress(member.getMemberid(), member.getMembername()+" �떂", "UTF-8"));
 			
-			// 메일 발송
+			// 硫붿씪 諛쒖넚
 			sender.send(message);
 			
 		} catch (MessagingException e) {

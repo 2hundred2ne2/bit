@@ -18,8 +18,13 @@
 	<%@ include file="/WEB-INF/views/include/header.jsp"  %>
 	<%@ include file="/WEB-INF/views/include/nav.jsp"  %>
 	<div class="contents">
-		<h2 class="content_title">NullPointerException</h2>
-		
+		<h2 class="content_title">My Page</h2>
+		<hr>
+		<div class="content">
+		My Page 입니다.<br>
+		${loginInfo} <br>
+		<img alt="회원사진" src="<c:url value="/fileupload/member/${loginInfo.memberphoto}"/>"> 
+		</div>
 	</div>
 	<%@ include file="/WEB-INF/views/include/footer.jsp" %>
 </body>

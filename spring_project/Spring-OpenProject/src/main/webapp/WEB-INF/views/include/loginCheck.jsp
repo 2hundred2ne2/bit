@@ -4,6 +4,7 @@
 	
 	// 로그인 여부 체크
 	boolean chk = false;
+
 	chk = session.getAttribute("loginInfo")==null ? false : true;
 	
 	if(!chk){
