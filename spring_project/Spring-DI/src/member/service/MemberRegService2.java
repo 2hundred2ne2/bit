@@ -6,7 +6,7 @@ import member.dao.Dao;
 
 public class MemberRegService2 implements MemberService  {
 
-	@Autowired
+	@Autowired //주입해준다 
 	private Dao dao; // 주입 받아야 하는 참조 변수
 	
 	@Override

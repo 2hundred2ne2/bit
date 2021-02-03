@@ -6,7 +6,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
-	<context:annotation-config/>
+	<context:annotation-config/> <!--  어노테이션을 쓰려면 써줘야한다 . -->
 
 	<!-- MemberDao Bean(인스턴스)으로 등록 -->
 	<bean id="memberDao" class="member.dao.MemberDao"/>

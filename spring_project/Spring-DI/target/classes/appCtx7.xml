@@ -10,12 +10,12 @@
 
 	<!-- MemberDao Bean(인스턴스)으로 등록 -->
 	<bean id="memberDao" class="member.dao.MemberDao">
-		<qualifier value="member"/>
+		<qualifier value="member"/> <!-- @autowired 사용시 같이 써야한다. -->
 	</bean>
 	
 	<!-- GuestDao Bean 등록 -->
 	<bean id="guestDao" class="member.dao.GuestDao">
-		<qualifier value="guest"/>
+		<qualifier value="guest"/> <!--   객체를 사용 할 수 있도록 한다  -->
 	</bean>
 
 	<!-- MemberRegService Bean으로 등록 -->

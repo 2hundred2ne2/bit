@@ -25,7 +25,7 @@ public class HomeController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
 		
-		logger.info("Index", locale);
+		logger.info("Index", locale);// 를 넣으면 콘솔에 정상적으로 들었는지  출력해준다 
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
